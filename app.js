@@ -9,11 +9,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a,b){ //eslint-disable-line
+  var calculatedSum = a + b;
 
+  /*
+  format("The sum of %i and %i is %i", a, b, calculatedSum)
+  format("The sum of {0} and {1} is {2}.")
+  `The sum of ${a} and ${b} is ${calculatedSum}.`
+  */
+
+  return [
+    calculatedSum,
+    'The sum of ' + a + ' and ' + b + ' is ' + calculatedSum + '.',
+  ];
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
