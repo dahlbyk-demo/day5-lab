@@ -11,9 +11,15 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a,b){ //eslint-disable-line
   var calculatedSum = a + b;
 
+  /*
+  format("The sum of %i and %i is %i", a, b, calculatedSum)
+  format("The sum of {0} and {1} is {2}.")
+  `The sum of ${a} and ${b} is ${calculatedSum}.`
+  */
+
   return [
     calculatedSum,
-    ''
+    'The sum of ' + a + ' and ' + b + ' is ' + calculatedSum + '.',
   ];
 }
 
