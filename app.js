@@ -38,11 +38,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
-
+  var calculatedProduct = a * b;
+  return [
+    calculatedProduct,
+    'The product of ' + a + ' and ' + b + ' is ' + calculatedProduct + '.'
+  ];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -81,12 +85,22 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
+  var calculatedSum = 0;
+  for(var i = 0; i < testArray.length; i++) {
+    var valueFromArray = testArray[i];
 
+    calculatedSum = sum(valueFromArray, calculatedSum)[0];
+  }
+
+  return [
+    calculatedSum,
+    testArray + ' was passed in as an array of numbers, and ' + calculatedSum + ' is their sum.'
+  ];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -102,10 +116,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
+  var calculatedProduct = 1;
+  for (var i = 0; i < testArray.length; i++) {
+    var valueFromArray = testArray[i];
 
+    calculatedProduct = multiply(valueFromArray, calculatedProduct)[0];
+  }
+
+  return [
+    calculatedProduct,
+    'The numbers ' + testArray + ' have a product of ' + calculatedProduct + '.'
+  ];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
