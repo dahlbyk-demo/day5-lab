@@ -2,3 +2,7 @@ body {
   background-color: #ccc;
   color: #333;
 }
+
+a, a:hover, a:visited {
+  text-decoration: none;
+}
